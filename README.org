@@ -1,7 +1,9 @@
-** mjstarter
+* mjstarter
 
-A Leiningen template that sets up a workflow for figwheel and weasel with as
-least as effort as possible. 
+A Leiningen template that sets up a workflow for figwheel and weasel with the
+least of effort as possible. 
+
+** Usage
    
 Create a new app from the template:
 : lein new mjstarter foobar
@@ -13,7 +15,7 @@ Start the figwheel and nrepl server:
 Give it a minute.
 
 Add the following function to Emacs:
-#+BEGIN_SRC 
+#+BEGIN_SRC elisp
 (defun mjstarter ()
   "Cider-connect to localhost:52123 and start weasel repl"
   (interactive)
@@ -26,20 +28,34 @@ Start the cljs repl.
 
 Navigate in a browser to http://localhost:2449/index.html
 
-Edit the cljs files in src-cljs and the css files in resources/public. Browser updates without refreshing.
+Edit the cljs files in src-cljs and the css files in resources/public. Browser
+updates without refreshing.
+
+** Editing the template
+   
+For more info on creating leiningen templates see [[https://github.com/Raynes/lein-newnew][here]] .
 
 To adapt the template, first clone the repo:
-: git clone git:asdfas
+: git clone git@github.com:Michieljoris/mjstarter.git
 
 Edit =src/leiningen/new/mjstarter.clj= . There are some settings in there for host and port settings for weasel, figwheel and the nrepl server.
 
-For more info on creating leiningen templates see [[https://github.com/Raynes/lein-newnew][here]] .
+The files that make up the instantiated project are in =resources/leiningen/new/mjstarter=.
 
-## Usage
+To add/update the modified template in the local leiningen repository:
+: lein install
 
-FIXME
+To push to clojars.org:
+: lein deploy
 
-## License
+But this will push to my account at clojars.org.
+
+To make a new template:
+: lein new template template-name
+
+Then adapt it, possibly copying from this template.
+
+** License
 
 Copyright © 2014 FIXME
 
