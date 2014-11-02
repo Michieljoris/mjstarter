@@ -16,6 +16,6 @@
   []
   (cemerick.piggieback/cljs-repl 
    :repl-env (repl-env                                          
-              :ip {{weasel-host}} :port {{weasel-port}})))
+              :ip "{{weasel-host}}" :port {{weasel-port}})))
 
 

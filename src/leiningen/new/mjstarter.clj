@@ -17,20 +17,21 @@
               :namespace main-ns
               :sanitized (name-to-path main-ns)
               :year (year)
-              :weasel-port: 8092
-              :weasel-host: "127.0.0.1"
-              :figwheel-host: 3449
-              :figwheel-port: 3449
-              :nrepl-host: "127.0.0.1"
-              :nrepl-port: 15123
-              }
-     (println "Generating a project called" name "based on the 'mjstarter' template.")
-     (println "Rest:" rest)
-     (->files data
+              :weasel-port 8092
+              :weasel-host "127.0.0.1"
+              :figwheel-host "127.0.0.1"
+              :figwheel-port 3449
+              :nrepl-host "127.0.0.1"
+              :nrepl-port  15123
+              } ]
+    (println "Generating a project called" name "based on the 'mjstarter' template.")
+    ;; (println "Rest:" rest)
+    (->files data
              ["project.clj" (render "project.clj" data)]
+             ["Procfile" (render "Procfile" data)]
              ["README.org" (render "README.org" data)]
              [".gitignore" (render "gitignore" data)]
-             ["src-clj/mjstarter/weasel.clj" (render "weasel.clj" data)]
+             ["src-clj/mjstarter/core.clj" (render "weasel.clj" data)]
              ["src-clj/{{sanitized}}.clj" (render "core.clj" data)]
              ["src-cljs/{{sanitized}}.cljs" (render "core.cljs" data)]
              ["resources/public/css/main.css" (render "main.css" data)]
@@ -38,3 +39,5 @@
              ;; ["doc/intro.md" (render "intro.md" data)]
 
              )))
+
+

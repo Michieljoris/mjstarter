@@ -55,6 +55,9 @@ To make a new template:
 
 Then adapt it, possibly copying from this template.
 
+Don't forget to add to ~/.lein/profiles.clj:
+: [mjstarter/lein-template "0.1.0-SNAPSHOT"] 
+
 ** License
 
 Copyright © 2014 FIXME
