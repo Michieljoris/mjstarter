@@ -18,7 +18,7 @@
 
 ;; figwheel
 (fw/watch-and-reload
-  ;; :websocket-url "ws://localhost:{{figwheel-port}}/figwheel-ws" 
+  ;; :websocket-url "ws://{{figwheel-host}}:{{figwheel-port}}/figwheel-ws" 
   :jsload-callback (fn [] (print "reloaded"))) ;; optional callback
 
 (enable-console-print!)

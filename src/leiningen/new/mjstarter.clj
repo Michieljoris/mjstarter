@@ -19,7 +19,9 @@
               :year (year)
               :weasel-port: 8092
               :weasel-host: "127.0.0.1"
+              :figwheel-host: 3449
               :figwheel-port: 3449
+              :nrepl-host: "127.0.0.1"
               :nrepl-port: 15123
               }
      (println "Generating a project called" name "based on the 'mjstarter' template.")

@@ -117,8 +117,8 @@
                  :skip-default-init false
                  ;; Customize the socket the repl task listens on and
                  ;; attaches to.
-                 ;; :host "0.0.0.0"
-                 :port 52123
+                 :host {{nrepl-host}}
+                 :port {{nrepl-port}}
                  ;;for more options see the sample project.clj
                  :nrepl-middleware [cemerick.piggieback/wrap-cljs-repl]}
   

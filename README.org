@@ -1,0 +1,47 @@
+** mjstarter
+
+A Leiningen template that sets up a workflow for figwheel and weasel with as
+least as effort as possible. 
+   
+Create a new app from the template:
+: lein new mjstarter foobar
+
+Start the figwheel and nrepl server:
+: cd foobar
+: lein cooper
+
+Give it a minute.
+
+Add the following function to Emacs:
+#+BEGIN_SRC 
+(defun mjstarter ()
+  "Cider-connect to localhost:52123 and start weasel repl"
+  (interactive)
+  (cider-connect "localhost" 52123)
+  (cider-insert-in-repl "(require 'mjstarter.core) (mjstarter.core/weasel)" t))
+#+END_SRC 
+
+Start the cljs repl.
+: M-x mjstarter
+
+Navigate in a browser to http://localhost:2449/index.html
+
+Edit the cljs files in src-cljs and the css files in resources/public. Browser updates without refreshing.
+
+To adapt the template, first clone the repo:
+: git clone git:asdfas
+
+Edit =src/leiningen/new/mjstarter.clj= . There are some settings in there for host and port settings for weasel, figwheel and the nrepl server.
+
+For more info on creating leiningen templates see [[https://github.com/Raynes/lein-newnew][here]] .
+
+## Usage
+
+FIXME
+
+## License
+
+Copyright © 2014 FIXME
+
+Distributed under the Eclipse Public License either version 1.0 or (at
+your option) any later version.
