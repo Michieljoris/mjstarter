@@ -38,7 +38,7 @@ For more info on creating leiningen templates see [[https://github.com/Raynes/le
 To adapt the template, first clone the repo:
 : git clone git@github.com:Michieljoris/mjstarter.git
 
-Edit =src/leiningen/new/mjstarter.clj= . There are some settings in there for host and port settings for weasel, figwheel and the nrepl server.
+Edit =src/leiningen/new/mjstarter.clj= . There are some settings in there for host and port settings for weasel, figwheel and the nrepl server, and of course the rest of the configuration for the template.
 
 The files that make up the instantiated project are in =resources/leiningen/new/mjstarter=.
 
