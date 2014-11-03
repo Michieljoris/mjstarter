@@ -103,13 +103,13 @@
                  ;; defaults to something like (fn [ns] (str *ns* "=> "))
                  ;; :prompt (fn [ns] (str "your command for <" ns ">, master? " ))
                  ;; What to print when the repl session starts.
-                 :welcome (println "Welcome to the magical world of the repl!")
+                 ;; :welcome (println "Welcome to the magical world of the repl!")
                  ;; Specify the ns to start the REPL in (overrides :main in
                  ;; this case only)
                  ;; :init-ns foo.bar
                  ;; This expression will run when first opening a REPL, in the
                  ;; namespace from :init-ns or :main if specified.
-                 :init (println "here we are in" *ns*)
+                 :init (println "Here we are in" *ns*)
                  ;; Print stack traces on exceptions (highly recommended, but
                  ;; currently overwrites *1, *2, etc).
                  ;; :caught clj-stacktrace.repl/pst+
